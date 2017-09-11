@@ -1,9 +1,9 @@
 # Latex-Bewerbungsvorlage
 
-Eine einfache Bewerbungsvorlage fuer einen Englischen Lebenslauf (Curriculum Vitae) und ein passendes Anschreiben.
+Eine einfache Bewerbungsvorlage für einen Englischen Lebenslauf (Curriculum Vitae) und ein passendes Anschreiben.
 
 ## Getting Started
-Umgebungsvariablen in allen *.tex Files aendern. Rest ist selbsterklaerend
+Umgebungsvariablen in allen *.tex Files ändern. Rest ist selbsterklärend
 
 ### Prerequisites
 
@@ -26,7 +26,7 @@ eg: open curriculumVitae.pdf
 
 ## Authors
 
-Timo Gruen
+Timo Grün
 
 ## License
 Diese Vorlage ist zur freien Benutzung.
