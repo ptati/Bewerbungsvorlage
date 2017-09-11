@@ -1,0 +1,137 @@
+\documentclass[a4paper,10pt]{article}
+
+% A Few Useful Packages
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\usepackage{calc}
+\usepackage[most]{tcolorbox}
+\RequirePackage{color,graphicx}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+\usepackage[absolute]{textpos}
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+% --------------------UMGEBUNGSVARIABLEN-----------------------------------------------------------------------------
+\newcommand{\vorname}{Max }
+\newcommand{\nachname}{Mustermann }
+\newcommand{\geburtag}{1. Januar 2001}
+\newcommand{\geburtsort}{Musterstadt, Musterland}
+\newcommand{\adresse}{Musterstra{\ss}e 1 in 13456, Musterstadt}
+\newcommand{\telefon}{0123 456789}
+\newcommand{\email}{mustermann@mustermail.de}
+
+
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+\pagestyle{empty} % non-numbered pages
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering{\Huge \vorname \textsc{\nachname}}\bigskip\par}
+
+%=======================================SECTIONS=====================================================================
+%Section: Personal Data
+\section{Pers\"onliche Daten}
+
+\begin{minipage}[t]{0.7\textwidth}%
+\begin{tabular}{rl}
+  \textsc{Geburtstag:} & \geburtag \\
+  \textsc{Geburtsort:} & \geburtsort \\
+  \textsc{Adress:}   & \adresse \\
+  \textsc{Telefon:}     & \telefon \\
+  \textsc{Email:}     & \href{mailto:\email}{\email}
+\end{tabular}
+\end{minipage}%
+\begin{minipage}[t]{0.3\textwidth}%
+\raisebox{-.5\height}{\tcbox[size=fbox]{\includegraphics[scale=0.15]{Bewerbungsfoto.jpeg}}}
+\end{minipage}%
+
+%Section: Berufserfahrung -------------------------------------------------------------------------------------------
+\section{Berufserfahrung}
+\begin{tabular}{p{2.5cm}|p{11cm}}
+  \emph{Jetzt} & Studentische Hilfskraft bei \textsc{Musteruniversit\"t}, Musterstadt \\
+  \textsc{April 1872}&\emph{Professionelle Softwareentwicklung}\\
+  &\footnotesize{}\\
+
+  \emph{M\"arz 1873} & Musterstelle bei \textsc{Musterfirma}, Musterstadt \\
+  \textsc{Oktober 1872}&\emph{Softwareentwicklung}\\
+  &\footnotesize{}\\
+
+\end{tabular}
+
+
+
+%Section: Ausbildung ------------------------------------------------------------------------------------------------
+\section{Schul- \& Berufsausbildung}
+\begin{tabular}{p{2.5cm}|p{11cm}}	
+  \emph{April 1869}&  Musterstudium, \textbf{Musteruni}, Musterstadt\\
+  \textsc{April} 1866& \small\emph{voraussichtlicher Abschluss: Musterbachelor} \\
+  &\normalsize \hyperlink{grds}{\hfill | \footnotesize Liste der abgelegten Pr\"ufungen}\\&\\
+
+   \textsc{Juli} 1865 & Allgemeine Hochschulreife \textit{(Abitur)}, \textbf{Mustergymnasium}, Musterstadt\\
+  \textsc{August 1860}
+\end{tabular}
+
+
+%Section: Sprachen --------------------------------------------------------------------------------------------------
+\section{Sprachen}
+\begin{tabular}{rl}
+ \textsc{Deutsch:}& Muttersprache\\
+\textsc{Englisch:}& Flie{\ss}end\\
+\textsc{Franz\"osisch:}& Grundkenntnisse\\
+\end{tabular}
+
+
+%Section: Kenntnisse --------------------------------------------------------------------------------------------
+\section{Kenntnisse} 
+\begin{tabular}{rl}
+  Grundkenntnisse:& \textsc{C}, \textsc{Emacs}, \textsc{Python}, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+  Fortgeschritten:& \textsc{Java}, \textsc{JavaFx}, \textsc{Mac Os} \\
+\end{tabular}
+
+%Section Interessen -------------------------------------------------------------------------------------------------
+\section{Interessen und Aktivit\"aten}
+Mustersport, Mustersprache\\
+
+\newpage
+\par{\centering\Large \hypertarget{grds}{Bachelor of Science in \textsc{Musterstudium}}\par}\large{\centering Abgeschlossene Pr\"ufungen\par}\normalsize
+\begin{center}
+\begin{tabular}{lc|c}
+\multicolumn{1}{c}{\textsc{Exam}}&&\textsc{Credits}\\ \hline
+Mustermodul 1 (\textit{Mustername})	&&	10\\
+Mustermodul 2 (\textit{Mustername})	&&	10\\
+
+
+		& \\\cline{2-3}
+&\textsc{Total}&\textbf{20}
+\end{tabular}
+\end{center}
+\end{document}

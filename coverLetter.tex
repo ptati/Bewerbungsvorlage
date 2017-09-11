@@ -1,0 +1,113 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	        %other packages for formatting
+\usepackage{calc}
+\usepackage[absolute]{textpos}
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage{titlesec}					%custom \section
+\usepackage[german]{babel}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+
+%-----------------UMGEBUNGSVARIABLEN------------------------------------------------------------------------------------
+\newcommand{\nachname}{Mustermann }                      % Auf Leerzeichen nach den Variablen achten!
+\newcommand{\vorname}{Max }         
+\newcommand{\strasse}{Musterstra{\ss}e 1 }
+\newcommand{\plz}{12345 }
+\newcommand{\stadt}{Musterstadt}                         % nur bei der Stadt KEIN Leerzeichen! 
+\newcommand{\telefon}{0123 456789 }
+\newcommand{\email}{mustermann@muster.de }
+
+\newcommand{\firmenname}{Musterfirma GmbH }
+\newcommand{\ansprechpartner}{Frau Musterfrau }
+\newcommand{\firmenstrasse}{Firmenmustersta{\ss}e 5 }
+\newcommand{\firmenstadt}{54321 Firmenmusterstadt }
+
+\newcommand{\bewerbungstitel}{Bewerbung als Softwareentwickler bei Musterfirma}
+%--------------------BEGIN DOCUMENT------------------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty} % non-numbered pages
+
+
+%----------------------TITLE-------------------------------------------------------------------------------------------
+\par{\centering{\Huge \vorname \textsc{\nachname}}\bigskip\par}
+
+%----------------------YOUR-ADRESSE-------------------------------------------------------------------------------------
+\hspace*{0.7\linewidth}
+\begin{minipage}{0.4\linewidth}
+  \strasse\par
+  \plz\stadt\par
+  \textsc{Telefon:} \telefon\par
+  \textsc{Email:} \href{mailto:\email}{\email}\par
+\end{minipage}
+
+\hbox{}\hbox{}%
+%----------------------THEIR-ADRESSE------------------------------------------------------------------------------------
+\begin{minipage}{0.4\linewidth}
+  \textbf{\firmenname}\par
+  \ansprechpartner\par
+  \firmenstrasse\par
+  \firmenstadt\par
+\end{minipage}
+
+%----------------------DATE----------------------------------------------------------------------------------------------
+\hspace*{0.7\linewidth}
+\begin{minipage}{0.4\linewidth}
+\stadt, \today\par
+\end{minipage}
+\hbox{}\hbox{}%
+
+%----------------------HEAD-LINE-----------------------------------------------------------------------------------------
+\section{\bewerbungstitel}%
+
+
+%----------------------COVER-LETTER--------------------------------------------------------------------------------------
+\hbox{}\hbox{}
+Sehr geehrte(r) \ansprechpartner,\\
+
+Hier sollten darauf eingangen werden, wie man an die Bewerbung gekommen ist und wieso man sich bewirbt. 
+
+Hier sollte stehen, wieso du dich ausgerechnet bei der DIESER Firma bewirbst.
+
+Hier sollte stehen, was an Erfahrung du mitbringst. (Beispielsweise, welche Programmiersprachen man gelernt hat, mit welchen Technologien man bisher gearbeitet hat usw.). Ggf auf vorherige Jobs eingehen, die f\"ur dich sprechen. (sollten sich auf den Job aber beziehen.)
+
+Wie siehst du deine Zukunft? Hier sollten einige Worte dazu stehen, am besten auf die Firma gem\"unzt. 
+
+\"Uber eine Einladung zum Vorstellungsgespr\"ach freue ich mich sehr.
+
+\hbox{}\hbox{}
+Mit freundlichen Gr\"u{\ss}en\\
+
+\vorname \nachname
+
+
+
+\end{document}
