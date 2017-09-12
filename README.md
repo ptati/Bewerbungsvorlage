@@ -7,8 +7,9 @@ Umgebungsvariablen in allen *.tex Files ändern. Rest ist selbsterklärend
 
 ### Prerequisites
 
-Xelatex
-
+* Xelatex
+* Wenn Xelatex über Tex Live installiert wurde, dann kann es sein dass die
+  beiden `.sty`-Dateien `textpos.sty` und `titlesec.sty` fehlen.
 ### Compile
 ```
 xelatex curriculumVitae.tex && xelatex coverletter.tex
