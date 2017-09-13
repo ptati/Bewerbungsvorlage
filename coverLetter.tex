@@ -61,17 +61,16 @@ ItalicFont = Fontin-Italic.otf
 \par{\centering{\Huge \vorname \textsc{\nachname}}\bigskip\par}
 
 %----------------------YOUR-ADRESSE-------------------------------------------------------------------------------------
-\hspace*{0.7\linewidth}
-\begin{minipage}{0.4\linewidth}
+\hfill\begin{minipage}{0.4\linewidth}
   \strasse\par
   \plz\stadt\par
   \textsc{Telefon:} \telefon\par
-  \textsc{Email:} \href{mailto:\email}{\email}\par
+  \textsc{Email:} \href{mailto:\email}{\email}
 \end{minipage}
 
 \hbox{}\hbox{}%
 %----------------------THEIR-ADRESSE------------------------------------------------------------------------------------
-\begin{minipage}{0.4\linewidth}
+\begin{minipage}{5cm}
   \textbf{\firmenname}\par
   \ansprechpartner\par
   \firmenstrasse\par
@@ -79,13 +78,13 @@ ItalicFont = Fontin-Italic.otf
 \end{minipage}
 
 %----------------------DATE----------------------------------------------------------------------------------------------
-\hspace*{0.7\linewidth}
-\begin{minipage}{0.4\linewidth}
+\hfill\begin{minipage}{0.4\linewidth}
 \stadt, \today\par
 \end{minipage}
 \hbox{}\hbox{}%
 
 %----------------------HEAD-LINE-----------------------------------------------------------------------------------------
+\smallskip
 \section{\bewerbungstitel}%
 
 
@@ -103,8 +102,10 @@ Wie siehst du deine Zukunft? Hier sollten einige Worte dazu stehen, am besten au
 
 \"Uber eine Einladung zum Vorstellungsgespr\"ach freue ich mich sehr.
 
-\hbox{}\hbox{}
-Mit freundlichen Gr\"u{\ss}en\\
+\bigskip
+Mit freundlichen Gr\"u{\ss}en
+
+\bigskip
 
 \vorname \nachname
 
